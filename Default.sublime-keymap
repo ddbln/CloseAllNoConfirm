@@ -1,17 +1,22 @@
 [
-    {
-        "keys": ["ctrl+alt+shift+w"],
-        "command": "close_all_without_confirm",
-        "platform": "windows"
-    },
-    {
-        "keys": ["ctrl+alt+shift+w"],
-        "command": "close_all_without_confirm",
-        "platform": "linux"
-    },
-    {
-        "keys": ["super+alt+shift+w"],
-        "command": "close_all_without_confirm",
-        "platform": "osx"
-    }
+    // Suggested key binding for Windows and Linux platforms:
+    // Uncomment the following lines and modify the keys if needed.
+    // {
+    //     "keys": ["ctrl+alt+shift+w"],
+    //     "command": "close_all_without_confirm",
+    //     "platform": "windows"
+    // },
+    // {
+    //     "keys": ["ctrl+alt+shift+w"],
+    //     "command": "close_all_without_confirm",
+    //     "platform": "linux"
+    // },
+
+    // Suggested key binding for macOS platform:
+    // Uncomment the following lines and modify the keys if needed.
+    // {
+    //     "keys": ["super+alt+shift+w"],
+    //     "command": "close_all_without_confirm",
+    //     "platform": "osx"
+    // }
 ]

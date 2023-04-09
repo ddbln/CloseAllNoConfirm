@@ -10,7 +10,7 @@
                 "children":
                 [
                     {
-                        "caption": "CloseAllNoConfirm",
+                        "caption": "CloseAllNoConfirm Settings",
                         "command": "open_file",
                         "args": {
                             "file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-settings"
