@@ -1,0 +1,17 @@
+[
+    {
+        "keys": ["ctrl+alt+shift+w"],
+        "command": "close_all_without_confirm",
+        "platform": "windows"
+    },
+    {
+        "keys": ["ctrl+alt+shift+w"],
+        "command": "close_all_without_confirm",
+        "platform": "linux"
+    },
+    {
+        "keys": ["super+alt+shift+w"],
+        "command": "close_all_without_confirm",
+        "platform": "osx"
+    }
+]

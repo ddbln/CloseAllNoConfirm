@@ -39,7 +39,7 @@ To close all unsaved windows without confirmation dialogs, simply press the corr
 
 Alternatively, you can trigger the `CloseAllNoConfirm` command using the Command Palette. Press `Shift+Command+P` (Mac) or `Shift+Ctrl+P` (Windows/Linux) to open the Command Palette, then type "CloseAllNoConfirm" and press Enter.
 
-## Customization {#customization}
+## Customization
 
 ### Key Bindings
 
@@ -54,7 +54,7 @@ If you want to change the default key bindings, go to `Preferences > Key Binding
 
 Replace "your_key_combination" with your desired key combination.
 
-### Optional Confirmation Prompt {optional-confirmation-prompt}
+### Optional Confirmation Prompt
 
 By default, this plugin will close all unsaved windows without any confirmation. However, if you want to enable a single confirmation prompt before closing all unsaved windows, you can change the `ask_before_closing` setting in the `CloseAllNoConfirm.sublime-settings` file:
 

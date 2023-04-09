@@ -1,0 +1,15 @@
+# .gitignore
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Sublime Text project and workspace files
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
