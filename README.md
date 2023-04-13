@@ -32,31 +32,39 @@ You can trigger the `Close All without Confirmation` command using the Command P
 
 ### Key Bindings
 
-By default, Close All without Confirmation does not add key bindings. However, you can easily set up custom key bindings by following these steps:
+By default, ”Close All without Confirmation“ does not add key bindings. However, you can easily set up custom key bindings by following these steps:
 
-1. In Sublime Text, click on `Preferences > Browse Packages` or `Settings > Browse Packages` to open the packages folder.
-2. Locate the `Close All without Confirmation` folder and open the `Default.sublime-keymap` file.
-3. Uncomment the suggested key bindings for your platform and modify them as needed.
-4. Save the file to apply your changes.
+1. Navigate to `Settings` > `Package Settings` > `Close All without Confirmation` > `Key Bindings`.
+2. This will open the key bindings file in a new window. Add a new key binding entry, referring to the suggested key bindings below.
 
-**Or, alternatively:**
+**Suggested Key Bindings**
 
-1. Open the command palette (Ctrl+Shift+P on Windows/Linux, Cmd+Shift+P on macOS).
-2. Type "Preferences: Key Bindings" and press Enter.
-3. Add the following key binding to the right-hand pane (user key bindings), adjusting the keys as desired:
+For Windows and Linux platforms, you could use the following suggested key binding:
 
 ```json
-{
-    "keys": ["ctrl+alt+shift+w"],
-    "command": "close_all_without_confirm"
-}
+[
+    {
+        "keys": ["ctrl+alt+shift+w"],
+        "command": "close_all_without_confirm"
+    }
+]
+```
+for macOS:
+
+```json
+[
+    {
+        "keys": ["super+alt+shift+w"],
+        "command": "close_all_without_confirm"
+    }
+]
 ```
 
 ## Customization
 
 ### Optional Confirmation Prompt
 
-By default, this plugin will close all unsaved windows without any confirmation. However, if you want to enable a single confirmation prompt before closing all unsaved windows, you can change the `ask_before_closing` setting in the `Close All without Confirmation.sublime-settings` file:
+By default, this plugin will close all unsaved windows without any confirmation. However, if you want to enable a single confirmation prompt before closing all unsaved windows, you can add the following entry to your User settings:
 
 ```json
 {
@@ -64,17 +72,17 @@ By default, this plugin will close all unsaved windows without any confirmation.
 }
 ```
 
-To access the settings file, in Sublime Text, simply go to `Settings` or `Preferences` and then choose `> Package Settings > Close All without Confirmation Settings`.
+To access the settings file, in Sublime Text, simply go to `Settings` or `Preferences` and then choose > `Package Settings` > `Close All without Confirmation` > `Settings`.
 
 ## Frequently Asked Questions
 
 **Q: Does the plugin only close unsaved files or all files?**
 
-A: The Close All without Confirmation plugin closes all files, unsaved as well as saved ones. The main benefit is that it allows you to close all files without prompting for confirmation when closing unsaved files. Dealing with multiple confirmation dialogs can quickly become a painful experience. But don’t worry, this plugin has got you covered – it closes all files swiftly and efficiently!
+A: The “Close All without Confirmation“ plugin closes all files, unsaved as well as saved ones. The main benefit is that it allows you to close all files without prompting for confirmation when closing unsaved files. Dealing with multiple confirmation dialogs can quickly become a painful experience. But don’t worry, this plugin has got you covered – it closes all files swiftly and efficiently!
 
 **Q: Why would I need this? Can you provide an example of when this plugin would be useful?**
 
-A: Suppose you've searched and replaced a dozen or hundreds of files with one click: saving them all with one command (and no questions asked) is easy with Sublime Text. But: have you ever tried to close them without saving?
+A: Suppose you've searched and replaced a dozen or hundreds of files with a single click: saving them all is easy with Sublime Text and takes just one command (and no questions asked). But: have you ever tried to close them without saving?
 
 **Q: Is there any risk of losing my work when using this plugin?**
 
