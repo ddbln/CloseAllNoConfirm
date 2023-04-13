@@ -1,20 +1,31 @@
 [
     {
         "caption": "Preferences",
+        "mnemonic": "n",
         "id": "preferences",
         "children":
         [
             {
                 "caption": "Package Settings",
+                "mnemonic": "P",
                 "id": "package-settings",
                 "children":
                 [
                     {
-                        "caption": "CloseAllNoConfirm Settings",
-                        "command": "open_file",
-                        "args": {
-                            "file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-settings"
-                        }
+                        "caption": "Close all without confirmation",
+                        "children":
+                        [
+                            {
+                                "command": "edit_settings",
+                                "args": {"base_file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-settings", "default": "// Your settings go here"},
+                                "caption": "Settings"
+                            },
+                            {
+                                "command": "edit_settings",
+                                "args": {"base_file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-keymap", "default": "// Your key bindings go here (don't forget to wrap them in square brackets [ {...} ] )"},
+                                "caption": "Key Bindings"
+                            }
+                        ]
                     }
                 ]
             }

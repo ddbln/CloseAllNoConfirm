@@ -1,4 +1,4 @@
 [{
-	"caption": "CloseAllNoConfirm",
+	"caption": "File(s): Close All without Confirmation",
 	"command": "close_all_without_confirm"
 }]
