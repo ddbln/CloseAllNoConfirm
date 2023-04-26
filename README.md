@@ -1,6 +1,6 @@
 # Close All without Confirmation
 
-Effortlessly close all (unsaved and saved) files in Sublime Text without being interrupted by confirmation dialogs! This plugin is ideal for those who want to swiftly close multiple unsaved files without needing to confirm each one individually. Optionally, you can enable a single confirmation prompt before closing all files.
+Effortlessly close all (unsaved and saved) files in Sublime Text without being repeatedly interrupted by confirmation dialogs! This plugin is ideal for those who want to swiftly close multiple unsaved files without needing to confirm each one individually. Optionally, you can enable a single confirmation prompt before closing all files.
 
 ## Features
 
@@ -32,43 +32,50 @@ You can trigger the `Close All without Confirmation` command using the Command P
 
 ### Key Bindings
 
-By default, ”Close All without Confirmation“ does not add key bindings. However, you can easily set up custom key bindings by following these steps:
+By default, "Close All without Confirmation" does not add key bindings. However, you can easily set up custom key bindings by following these steps:
 
-1. Navigate to `Settings` > `Package Settings` > `Close All without Confirmation` > `Key Bindings`.
-2. This will open the key bindings file in a new window. Add a new key binding entry, referring to the suggested key bindings below.
+1. In Sublime Text, go to `Preferences` > `Package Settings` > `Close all without Confirmation` > `Key Bindings - Default`. This will open the default key bindings file for the plugin.
+2. Copy the key binding for your platform (Windows, Linux, or macOS) from the default key bindings file.
+3. Go to `Preferences` > `Package Settings` > `Close all without Confirmation` > `Key Bindings - User` to open your user-specific key bindings file.
+4. Paste the key binding you copied from the default key bindings file into your user key bindings file.
+5. Make sure to remove the "//" at the beginning of the lines to uncomment the key binding, then save the file.
+
+The key binding should now be enabled and ready to use.
 
 **Suggested Key Bindings**
 
-For Windows and Linux platforms, you could use the following suggested key binding:
+For macOS you could use e. g. the following suggested key binding:
+
+````json
+[
+	{
+		"keys": ["super+alt+shift+w"],
+		"command": "close_all_without_confirm"
+	}
+]
+````
+
+A suggestion for Windows and Linux platforms:
 
 ```json
 [
-    {
-        "keys": ["ctrl+alt+shift+w"],
-        "command": "close_all_without_confirm"
-    }
+	{
+		"keys": ["ctrl+alt+shift+w"],
+		"command": "close_all_without_confirm"
+	}
 ]
 ```
-for macOS:
 
-```json
-[
-    {
-        "keys": ["super+alt+shift+w"],
-        "command": "close_all_without_confirm"
-    }
-]
-```
 
 ## Customization
 
 ### Optional Confirmation Prompt
 
-By default, this plugin will close all unsaved windows without any confirmation. However, if you want to enable a single confirmation prompt before closing all unsaved windows, you can add the following entry to your User settings:
+By default, this plugin will close all unsaved windows after asking for your confirmation once. However, if you really want no prompt at all, you can add the following entry to your User settings:
 
 ```json
 {
-    "ask_before_closing": true
+	"ask_before_closing": false
 }
 ```
 
@@ -80,13 +87,13 @@ To access the settings file, in Sublime Text, simply go to `Settings` or `Prefer
 
 A: The “Close All without Confirmation“ plugin closes all files, unsaved as well as saved ones. The main benefit is that it allows you to close all files without prompting for confirmation when closing unsaved files. Dealing with multiple confirmation dialogs can quickly become a painful experience. But don’t worry, this plugin has got you covered – it closes all files swiftly and efficiently!
 
-**Q: Why would I need this? Can you provide an example of when this plugin would be useful?**
+**Q: Can you provide an example of when this plugin would be useful?**
 
 A: Suppose you've searched and replaced a dozen or hundreds of files with a single click: saving them all is easy with Sublime Text and takes just one command (and no questions asked). But: have you ever tried to close them without saving?
 
 **Q: Is there any risk of losing my work when using this plugin?**
 
-A: The plugin is designed for speed and convenience, but of course accidents can happen. If you’re concerned about losing unsaved work, you can enable the optional single confirmation prompt by setting the "ask_before_closing" option to true in the [settings](#optional-confirmation-prompt). This way, you’ll get one friendly reminder to save your work before the plugin closes all files.
+A: Although the plugin is designed for speed and convenience, accidents can still occur. That's why, by default, you will receive a single confirmation prompt before action, reminding you that any unsaved changes will be lost. However, if you wish to disable this prompt, you can do so by setting the "ask_before_closing" option to false in the settings. By doing so, the plugin will truly live up to its name.
 
 **Q: Will this plugin slow down my Sublime Text or cause any performance issues?**
 
@@ -95,14 +102,6 @@ A: No, the Close All without Confirmation plugin is lightweight and efficient. I
 **Q: Can I get key bindings? I need a shortcut for this wonderful timesaver!**
 
 A: Of course! Your fingers shall not be denied their favorite key combinations. Check the [Key Bindings](#key-bindings) section to set your own shortcut.
-
-**Q: Is the plugin compatible with different Sublime Text versions and operating systems?**
-
-A: Yes, the Close All without Confirmation plugin is designed to be compatible with Sublime Text 3 and Sublime Text 4 on Windows, macOS, and Linux. If you encounter any compatibility issues, please report them on the GitHub repository.
-
-**Q: I want to help make this plugin even more awesome. Can I contribute?**
-
-A: Absolutely! Contributions and suggestions are always welcome! Feel free to fork the repository, make changes, and submit pull requests. You can also report issues or request new features on GitHub to help make this plugin the best it can be.
 
 ## License
 

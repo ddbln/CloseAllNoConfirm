@@ -12,18 +12,33 @@
                 "children":
                 [
                     {
-                        "caption": "Close all without confirmation",
+                        "caption": "Close All without Confirmation",
                         "children":
                         [
                             {
                                 "command": "edit_settings",
-                                "args": {"base_file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-settings", "default": "// Your settings go here"},
+                                "args": {
+                                    "base_file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-settings",
+                                    "default": "// Your settings for Close All without Confirmation:\n{\n\t\"ask_before_closing\": true\n}"
+                                },
                                 "caption": "Settings"
                             },
                             {
-                                "command": "edit_settings",
-                                "args": {"base_file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-keymap", "default": "// Your key bindings go here (don't forget to wrap them in square brackets [ {...} ] )"},
-                                "caption": "Key Bindings"
+                                "caption": "-"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/CloseAllNoConfirm/Default.sublime-keymap"
+                                },
+                                "caption": "Key Bindings - Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default (${platform}).sublime-keymap"
+                                },
+                                "caption": "Key Bindings - User"
                             }
                         ]
                     }
