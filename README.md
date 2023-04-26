@@ -1,13 +1,13 @@
 # Close All without Confirmation
 
-Effortlessly close all (unsaved and saved) files in Sublime Text without being repeatedly interrupted by confirmation dialogs! This plugin is ideal for those who want to swiftly close multiple unsaved files without needing to confirm each one individually. Optionally, you can enable a single confirmation prompt before closing all files.
+Effortlessly close all (unsaved and saved) files in Sublime Text without being repeatedly interrupted by confirmation dialogs! This plugin is perfect for those who want to swiftly close multiple unsaved files without needing to confirm each one individually.
 
 ## Features
 
 - Close all files without confirmation dialogs.
-- Accessible via Command Palette.
+- Accessible via the Command Palette.
 - Easy-to-activate key bindings (instructions provided).
-- For cautious users: Close all files with just one confirmation (optional).
+- For cautious users: By default, "Close All without Confirmation" shows you a prompt before closing all files. However, you can disable this prompt in the settings to let the plugin truly live up to its name.
 
 ## Installation
 
@@ -71,7 +71,7 @@ A suggestion for Windows and Linux platforms:
 
 ### Optional Confirmation Prompt
 
-By default, this plugin will close all unsaved windows after asking for your confirmation once. However, if you really want no prompt at all, you can add the following entry to your User settings:
+This plugin offers a customization option that allows you to toggle whether you want a single confirmation prompt before closing all files without further confirmation. By default, the plugin will ask you once. However, you can easily change this setting to close all files without any prompt by toggling the following option in your User settings:
 
 ```json
 {
@@ -85,7 +85,7 @@ To access the settings file, in Sublime Text, simply go to `Settings` or `Prefer
 
 **Q: Does the plugin only close unsaved files or all files?**
 
-A: The “Close All without Confirmation“ plugin closes all files, unsaved as well as saved ones. The main benefit is that it allows you to close all files without prompting for confirmation when closing unsaved files. Dealing with multiple confirmation dialogs can quickly become a painful experience. But don’t worry, this plugin has got you covered – it closes all files swiftly and efficiently!
+A: The 'Close All without Confirmation' plugin closes all files, both unsaved and saved, with the main benefit being that you won't be prompted for each unsaved file. Dealing with multiple confirmation dialogs can quickly become a painful experience. But don’t worry, this plugin has got you covered – it closes all files swiftly and efficiently!
 
 **Q: Can you provide an example of when this plugin would be useful?**
 
