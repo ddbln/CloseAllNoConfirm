@@ -5,6 +5,7 @@ Effortlessly close all (unsaved and saved) files in Sublime Text without being r
 ## Features
 
 - Close all files without confirmation dialogs.
+- Option to close files only in the currently active window, perfect for those working with multiple projects.
 - Accessible via the Command Palette.
 - Easy-to-activate key bindings (instructions provided).
 - For cautious users: By default, "Close All without Confirmation" shows you a prompt before closing all files. However, you can disable this prompt in the settings to let the plugin truly live up to its name.
@@ -20,15 +21,17 @@ Effortlessly close all (unsaved and saved) files in Sublime Text without being r
 
 ### Manual Installation
 
-1. Download or clone this repository: `https://github.com/ddbln/Close All without Confirmation`
+1. Download or clone this repository: `https://github.com/ddbln/CloseAllNoConfirm`
 2. Open Sublime Text and click on `Preferences > Browse Packages...` or `Settings > Browse Packages...` to open the packages directory.
 3. Copy the entire `Close All without Confirmation` folder into the packages directory.
 
 ## Usage
 
+When you trigger the `Close All without Confirmation` command using the Command Palette or your custom key binding, you will see a quick panel with two options: "Close all files in all windows" and "Close all files in active window only". You can use the arrow keys to select your desired option and press Enter to confirm.
+
 ### Command Palette
 
-You can trigger the `Close All without Confirmation` command using the Command Palette. Press `Shift+Command+P` (Mac) or `Shift+Ctrl+P` (Windows/Linux) to open the Command Palette, then type "Close All without Confirmation" (Sublime Text autocompletes) and press Enter.
+You can trigger the `Close All without Confirmation` command using the Command Palette. Press `Shift+Command+P` (Mac) or `Shift+Ctrl+P` (Windows/Linux) to open the Command Palette, then type "Close All without Confirmation" (Sublime Text autocompletes) and press Enter. 
 
 ### Key Bindings
 
@@ -69,9 +72,9 @@ A suggestion for Windows and Linux platforms:
 
 ## Customization
 
-### Optional Confirmation Prompt
+### Disabling the Confirmation Prompt
 
-This plugin offers a customization option that allows you to toggle whether you want a single confirmation prompt before closing all files without further confirmation. By default, the plugin will ask you once. However, you can easily change this setting to close all files without any prompt by toggling the following option in your User settings:
+The plugin offers a customization option that allows you to toggle whether you want a single confirmation prompt before closing all files. By default, the plugin will ask you once, and you can then choose if you want to close all files in all windows or just the current one, or cancel.  However, you can easily change this setting to close all files in all windows without any prompt by toggling the following option in your User settings:
 
 ```json
 {
@@ -86,6 +89,10 @@ To access the settings file, in Sublime Text, simply go to `Settings` or `Prefer
 **Q: Does the plugin only close unsaved files or all files?**
 
 A: The 'Close All without Confirmation' plugin closes all files, both unsaved and saved, with the main benefit being that you won't be prompted for each unsaved file. Dealing with multiple confirmation dialogs can quickly become a painful experience. But don’t worry, this plugin has got you covered – it closes all files swiftly and efficiently!
+
+**Q: Can I choose to close files only in the active window?**
+
+A: Yes, with the latest update, you now have the option to close files either in all windows or only in the active window. When you trigger the `Close All without Confirmation` command, a quick panel will appear with these two options. Simply select your desired option and press Enter to confirm. Note that you can only choose this if the "ask_before_closing" option is turned on (which is by default).
 
 **Q: Can you provide an example of when this plugin would be useful?**
 
