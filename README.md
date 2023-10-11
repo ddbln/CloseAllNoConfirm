@@ -74,13 +74,18 @@ A suggestion for Windows and Linux platforms:
 
 ### Disabling the Confirmation Prompt
 
-The plugin offers a customization option that allows you to toggle whether you want a single confirmation prompt before closing all files. By default, the plugin will ask you once, and you can then choose if you want to close all files in all windows or just the current one, or cancel.  However, you can easily change this setting to close all files in all windows without any prompt by toggling the following option in your User settings:
+The plugin offers a customization option that allows you to toggle whether you want a single confirmation prompt before closing all files. By default, the plugin will ask you once, and you can then choose if you want to close all files in all windows or just the current one, or cancel.
+
+However, you can easily change this setting to close all files in all windows without any prompt by setting the following options in your User settings:
 
 ```json
 {
-	"ask_before_closing": false
+	"ask_before_closing": false,
+	"close_only_active_window": false
 }
 ```
+
+In case you want to only close the active windows' files you can set `close_only_active_window` to `true`.
 
 To access the settings file, in Sublime Text, simply go to `Settings` or `Preferences` and then choose > `Package Settings` > `Close All without Confirmation` > `Settings`.
 

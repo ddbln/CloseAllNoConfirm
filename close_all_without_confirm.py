@@ -8,12 +8,13 @@ import sublime_plugin
 class CloseAllWithoutConfirmCommand(sublime_plugin.WindowCommand):
     def run(self):
         ask_before_closing = self.get_setting("ask_before_closing", False)
+        close_only_active_window = self.get_setting("close_only_active_window", False)
 
         if ask_before_closing:
             options = ["Close All in all windows", "Close all in this window", "Cancel"]
             sublime.active_window().show_quick_panel(options, self.on_done)
         else:
-            self.close_all_files(False)
+            self.close_all_files(close_only_active_window)
 
     def on_done(self, index):
         if index == 0:
@@ -29,12 +30,12 @@ class CloseAllWithoutConfirmCommand(sublime_plugin.WindowCommand):
     def close_all_files(self, close_only_active_window):
         if close_only_active_window:
             active_window = sublime.active_window()
-            for view in active_window.views():
-                view.set_scratch(True)
-            active_window.run_command("close_all")
+            self.close_all_files_in_window(active_window)
         else:
             for window in sublime.windows():
-                for view in window.views():
-                    view.set_scratch(True)
-                window.run_command("close_all")
+                self.close_all_files_in_window(window)
 
+    def close_all_files_in_window(self, window):
+        for view in window.views():
+            view.set_scratch(True)
+        window.run_command("close_all")
