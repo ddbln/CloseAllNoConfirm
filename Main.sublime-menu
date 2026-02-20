@@ -12,14 +12,14 @@
                 "children":
                 [
                     {
-                        "caption": "Close All without Confirmation",
+                        "caption": "Force Close All Files",
                         "children":
                         [
                             {
                                 "command": "edit_settings",
                                 "args": {
                                     "base_file": "${packages}/CloseAllNoConfirm/CloseAllNoConfirm.sublime-settings",
-                                    "default": "// Your settings for Close All without Confirmation:\n{\n\t\"ask_before_closing\": true\n}"
+                                    "default": "// Your settings for Force Close All Files:\n{\n\t\"ask_before_closing\": true\n}"
                                 },
                                 "caption": "Settings"
                             },

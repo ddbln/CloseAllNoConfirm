@@ -1,4 +1,4 @@
-// Default settings for Close All without Confirmation:
+// Default settings for Force Close All Files:
 {
 	"ask_before_closing": true,
 

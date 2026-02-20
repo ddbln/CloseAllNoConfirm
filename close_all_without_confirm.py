@@ -1,5 +1,5 @@
-# CloseAllWithoutConfirm.py
-# A Sublime Text plugin to close all files (saved and unsaved) without confirmation
+# ForceCloseAllFiles.py
+# A Sublime Text plugin to force close all files (saved and unsaved) without confirmation
 # Copyright (c) 2023 Dirk Dassow
 
 import sublime
@@ -11,7 +11,7 @@ class CloseAllWithoutConfirmCommand(sublime_plugin.WindowCommand):
         close_only_active_window = self.get_setting("close_only_active_window", False)
 
         if ask_before_closing:
-            options = ["Close All in all windows", "Close all in this window", "Cancel"]
+            options = ["Force close all files in all windows", "Force close files in this window", "Cancel"]
             sublime.active_window().show_quick_panel(options, self.on_done)
         else:
             self.close_all_files(close_only_active_window)

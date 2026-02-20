@@ -1,7 +1,7 @@
 [
     // Copy the key binding for your platform (Windows, Linux, or macOS) from below
     // and paste it into your "User/Default (<YourPlatform>).sublime-keymap" file to enable it.
-    // You can open this file by going to Preferences/Settings > Package Settings > Close All without Confirmation > Key Bindings (User)
+    // You can open this file by going to Preferences/Settings > Package Settings > Force Close All Files > Key Bindings (User)
     // 
     // Make sure to remove the "//" at the beginning of the lines to uncomment the key binding.
 
