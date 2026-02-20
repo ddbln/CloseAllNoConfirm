@@ -1,4 +1,7 @@
 [{
-	"caption": "File(s): Force Close All Files",
+	"caption": "Force Close All Files",
+	"command": "close_all_without_confirm"
+},{
+	"caption": "Close All without Confirmation",
 	"command": "close_all_without_confirm"
 }]
